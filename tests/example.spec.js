@@ -2,9 +2,10 @@
 const { test, expect } = require('@playwright/test');
 
 // comando utilizado para abrir a pagina sempre que rodar um novo cenário
-test.beforeEach(async ({page }) => {
+test.beforeEach(async ({ page }) => {
   await page.goto('https://automationpratice.com.br/')
-})
+
+});
 
 test('Login com sucesso @login', async ({ page }) => {
 
@@ -67,6 +68,9 @@ test('Login com sucesso 2 @login', async ({ page }) => {
 
 });
 
-
+// código utilizado para realizar uma ação após a execução do teste, por exemplo: um exclusão de usuário após o teste, etc...
+test.afterEach(async ({page})=> {
+  
+});
 
 
